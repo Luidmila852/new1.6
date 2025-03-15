@@ -1,0 +1,71 @@
+body {
+  font-family: 'TTLakes'; 
+  background-color: $bgColorAll;
+}
+
+.container { 
+  padding: 10px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (min-width: 1120px) {
+  .container {
+   margin-left: 320px;
+  }
+}
+
+.list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.button-reset {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.a-reset {
+  text-decoration: none;
+  color: $colorGrey;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($bgColor, 0.7);
+  z-index: 11;
+  backdrop-filter: blur(2px);
+}
+
+.button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(to right, #F8F8F8, #FFFFFF);
+  box-shadow: 0 -1px 0 0 #D9FFF5;
+  margin: 0;
+  padding: 8px 0 8px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $colorGrey;
+  text-wrap: wrap;
+  margin:16px 0;
+}

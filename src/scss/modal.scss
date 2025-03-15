@@ -1,0 +1,133 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    padding: 24px 16px 75px 0px;
+    background-color: $bgColor;
+    box-shadow: -16px 0px 52px 0px #0e185033, -2px 0px 4px 0px #454f7e05, inset 1px 0 0 0 #D9FFF5;
+    transition: transform 0.3s ease;
+    right: -600px;
+
+    &-open {
+        right: 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 40px;
+        letter-spacing: -0.6px;
+        margin-left: 20px;
+        color: $colorBlac;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 32px;
+            width: 4px;
+            background-color: #41f6d7;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            transform: translate(-20px, 2px);
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__close {
+        margin: 0 16px;
+    }
+
+    &__input,
+    &__textarea {
+        margin: 0 16px;
+        height: 48px;
+        border-radius: 8px;
+        background-color: $bgColor;
+        border: 1px solid $dividirColor;
+    }
+
+    &__textarea {
+        height: 118px;
+    }
+
+    &__input::placeholder {
+        font-family: TTLakes;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $colorPlachol;
+        padding-left: 16px;
+    }
+
+    &__textarea {
+        font-family: TTLakes;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $colorPlachol;
+        opacity: 0.5;
+        padding: 16px;
+    }
+
+    &__text {
+        margin: 12px 16px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0px;
+        color: $colorGrey;
+        max-width: 376px;
+    }
+
+    &__link {
+        color: $colorPink;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.7;
+        }
+    }
+
+    &__submit {
+        margin-right: 16px;
+        display: block;
+        margin-top: 19px;
+        margin-left: auto;
+    }
+
+    @media (min-width: 1120px) {
+        &__close {
+            position: absolute;
+            left: -80px;
+            top: 45px;
+        }
+
+        &__form {
+            margin-left: 20px;
+        }
+
+        &__text {
+            margin: 12px 36px;
+        }
+
+        &__submit {
+            margin-right: 32px;
+        }
+
+        &__title {
+            margin-left: 32px;
+
+            &::before {
+                transform: translate(-33px, 2px);
+            }
+        }
+    }
+}
+  

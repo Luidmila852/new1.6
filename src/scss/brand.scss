@@ -1,0 +1,117 @@
+.brand {
+  min-width: 320px;
+   
+  &__item {
+      display: flex;
+      width: 224px;
+      height: 72px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      border: 1px solid #EAEAEA;
+      border-radius: 5px;
+      background-color: $bgColor;
+      padding: 16px;
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+     
+      &:hover {
+          opacity: 0.7;
+          cursor: pointer;
+          transform: scale(1.1);
+      }
+  }
+
+ }
+ .btn {
+  display: none;
+}
+
+@media (min-width:768px) {
+  .brand {
+    &__list {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    &__item {
+      width: 224px;
+    }
+  }
+
+.slider-1 {
+  max-height:192px;
+  transition:max-height 0.2s;
+  overflow: hidden;
+}
+.brand--open {
+  max-height:365px;
+}
+
+.btn {
+  display: block;
+  margin-bottom:8px;
+  position:relative;
+  margin-left:31px;
+  font-family:TTLakes;
+  font-weight:500;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing:-0.2px;
+  color: $colorBlac;
+&::before {
+  content:url('../img/down.svg');
+  position:absolute;
+  transform: translate(-15px);
+}
+&:hover {
+  opacity:0.7;
+  cursor:pointer;
+}}
+.btn--up {
+  border:none;
+  background:none;
+  font-family:TTLakes;
+  font-weight:500;
+  font-size:16px;
+  line-height:24px;
+  letter-spacing:-0.2px;
+  color:$colorBlac;
+  padding-bottom:14px;
+  margin-left:31px}
+
+.btn--up::before {
+  content:url('../img/up.svg');
+}
+.btn-up:hover {
+  opacity:0.7;
+  cursor:pointer;
+}
+}
+@media (min-width:1120px) {
+  .brand{padding-left:30px;
+    margin-right:-30px;
+  &__item{width: 240px;
+}
+}
+}
+@media (min-width:1366px) {
+  
+  .brand__list{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+  }
+  .slider-1 {
+    max-height:200px;
+    transition:max-height 0.2s;
+  }
+  .brand--open {
+    max-height:365px;
+  }
+
+  
+}

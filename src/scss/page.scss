@@ -1,0 +1,280 @@
+.page {
+	min-width: 320px;
+
+	&__topbar {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $bgColor;
+		padding: 8px 20px;
+		margin: 0;
+		max-width: 100%;
+		box-shadow: 0 1px 0 0 #D9FFF5;
+	}
+
+	&__logo {
+		margin: 0 16px;
+		transition: opacity 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 0.7;
+		}
+	}
+
+	&__users-actions {
+		display: none;
+	}
+
+	&__repair-actions {
+		display: flex;
+		align-items: center;
+		margin-left: 12px;
+		gap: 16px;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 2px;
+			height: 32px;
+			background-color: $dividirColor;
+			border-radius: 1px;
+			transform: translate(-15px, -5%);
+		}
+
+		&__about {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			margin-bottom: 52px;
+			padding-left: 0 30px;
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 28px;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+		margin-left: 20px;
+		color: $colorBlac;
+
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			height: 32px;
+			width: 4px;
+			background-color: #41f6d7;
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			transform: translate(-30px, 2px);
+		}
+	}
+}
+
+.nav {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	flex-wrap: nowrap;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+	width: 100%;
+
+	&__list {
+		padding: 10px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		white-space: nowrap;
+		gap: 10px;
+		overflow-x: auto;
+		color: $colorGrey;
+	}
+
+	&__item {
+		margin-bottom: 5px;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		text-align: left;
+		text-underline-position: from-font;
+		text-decoration-skip-ink: none;
+		display: block;
+		height: 25px;
+		margin-right: 13px;
+		padding: 8px;
+	}
+
+	&__item:hover {
+		height: 25px;
+		cursor: pointer;
+		border: 2px solid $colorBir;
+		border-radius: 6px;
+		background-color: $bgColor;
+	}
+}
+
+.header {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__repair-actions {
+		display: none;
+	}
+}
+
+.about {
+	&__content {
+		height: 120px;
+		overflow: hidden;
+	}
+
+	&__more {
+		display: flex;
+		justify-content: flex-start;
+		margin: 16px;
+		font-family: TTLakes;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+	}
+
+	&__more::before {
+		content: url('../img/down.svg');
+		position: absolute;
+		transform: translate(-15px);
+	}
+
+	&__content {
+		height: 120px;
+		overflow: hidden;
+	}
+
+	&__img {
+		width: 100%
+	}
+
+	&--open {
+		height: auto;
+	}
+}
+
+@media (min-width:510px) {
+	.about__content {
+		height: 120px;
+	}
+
+	.about--open {
+		height: auto;
+		;
+	}
+}
+
+@media(min-width:768px) {
+	.page {
+		&__open-menu {
+			margin-right: 10px;
+		}
+
+		&__open-menu::after {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 2px;
+			height: 32px;
+			background-color: $dividirColor;
+			border-radius: 1px;
+			transform: translate(53px, -38px);
+		}
+
+		&__users-actions {
+			display: flex;
+			margin-left: auto;
+		}
+
+		&__users-actions {
+			display: flex;
+			gap: 16px;
+			margin-right: 16px;
+		}
+
+		&__about {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			padding-left: 20px;
+		}
+	}
+
+	.about {
+		margin-right: 25px;
+		margin-bottom: 30px;
+
+		&__content {
+			height: 200px;
+		}
+
+		&__left {
+			display: flex;
+			flex-direction: column;
+			max-width: 50%;
+			padding-right: 17px;
+		}
+
+		&__img {
+			max-width: 50%;
+			margin-top: 17px;
+			width: 100vw;
+			border-radius: 5px;
+		}
+
+		&--open {
+			height: auto;
+		}
+	}
+}
+
+@media (min-width:1120px) {
+
+	.page {
+		padding-left: 34px;
+
+		&__topbar {
+			display: none;
+		}
+
+		&__repair-actions {
+			display: flex;
+			gap: 32px;
+		}
+	}
+
+
+	.header__button {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-family: TTLakes;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		color: $colorBlac;
+	}
+
+	.nav__list {
+		max-width: 1440px;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+	}
+
+}

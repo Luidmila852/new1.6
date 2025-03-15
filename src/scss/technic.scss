@@ -1,0 +1,100 @@
+.technic {
+  width: 100%;
+
+  &__item {
+    display: flex;
+    width: 224px;
+    height: 160px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 1px solid #EAEAEA;
+    border-radius: 5px;
+    background-color: $bgColor;
+    font-weight: 500;
+    color: $colorBlac;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+
+    img {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media (min-width:768px) {
+  .technic {
+    &__item {
+      min-width: 224px;
+    }
+
+    &__list {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .slider-2 {
+    max-height: 200px;
+    transition: max-height 0.2s;
+    overflow: hidden;
+  }
+
+  .technic--open {
+    max-height: 365px;
+  }
+
+  .btn--up {
+    border: none;
+    background: none;
+    font-family: TTLakes;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $colorBlac;
+    padding-bottom: 14px;
+    margin-left: 31px
+  }
+
+  .btn--up::before {
+    content: url('../img/up.svg');
+  }
+
+  .btn--up:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+
+@media (min-width:1120px) {
+  .technic {
+    padding-left: 30px;
+  }
+}
+
+@media (min-width:1366px) {
+  .technic {
+    padding: 24px 32px 15px 32px;
+
+    &__list {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .technic--open {
+    max-height: 365px;
+  }
+}
