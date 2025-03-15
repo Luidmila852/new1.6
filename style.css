@@ -535,7 +535,7 @@ body {
     margin: 0 16px; }
   .modal__input, .modal__textarea {
     margin: 0 16px;
-    height: 48px;
+    /*height: 48px;*/
     border-radius: 8px;
     background-color: #FFFFFF;
     border: 1px solid #EAEAEA; }
@@ -817,11 +817,9 @@ body {
     grid-area: block1;
     height: 35px; }
   .price__block2 {
-    grid-area: block2;
-    /*padding-top: 8px;*/ }
+    grid-area: block2; }
   .price__block3 {
-    grid-area: block3;
-    /*padding-top: 8px;*/ }
+    grid-area: block3; }
   .price__order {
     margin-top: 20px;
     grid-area: order; }
